@@ -262,6 +262,7 @@
 * [Rubeus](https://github.com/GhostPack/Rubeus)
 * [Exegol](https://exegol.readthedocs.io/)
 * [PowerSploit](https://powersploit.readthedocs.io)
+* [Certipy](https://github.com/ly4k/Certipy/wiki)
 * [Hashcat](hashcat/README.md)
   * [for Active Directory](https://www.thehacker.recipes/ad/movement/credentials/cracking)
   * [Official docs](https://hashcat.net/wiki/)
