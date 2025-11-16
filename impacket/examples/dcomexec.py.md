@@ -9,6 +9,7 @@ The utility currently supports three different DCOM objects for command executio
 
 This technique does not require installing any service or agent on the target system and runs with the privileges of the authenticated user.
 
+{% hint style="warning" %}
 ### Required privileges
 
 To use `dcomexec.py`, the following prerequisites must be met on the target:
@@ -18,6 +19,7 @@ To use `dcomexec.py`, the following prerequisites must be met on the target:
 - **RPC/DCOM ports reachable** (TCP 135 + dynamic RPC ports)  
 - **SMB reachable** (port 445 for output retrieval)  
 - **DCOM enabled** (default on Windows)
+{% endhint %}
 
 ## Commons
 
