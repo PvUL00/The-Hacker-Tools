@@ -9,32 +9,15 @@ The utility currently supports three different DCOM objects for command executio
 
 This technique does not require installing any service or agent on the target system and runs with the privileges of the authenticated user.
 
-{% hint style="warning" %}
 ### Required privileges
 
-To successfully execute commands via DCOM, the following conditions **must** be met:
+To use `dcomexec.py`, the following prerequisites must be met on the target:
 
-**1. Local administrator privileges (mandatory)**  
-`dcomexec.py` writes command output to `C:\Windows\` via **ADMIN$**, which requires being **local admin** on the target.
-
-**2. DCOM Remote Activation / Launch permissions**  
-The user must have permission to remotely activate the selected DCOM object  
-(*MMC20.Application*, *ShellWindows*, *ShellBrowserWindow*).  
-Local administrators have these permissions by default.
-
-**3. RPC/DCOM ports accessible**  
-- TCP **135** (RPC Endpoint Mapper)  
-- RPC dynamic ports (**49152–65535** by default)  
-If blocked, DCOM execution will fail.
-
-**4. SMB accessible (TCP 445)**  
-SMB is required to retrieve the command output via `ADMIN$`.  
-SMBv2/v3 are supported (SMBv1 not required).
-
-**5. DCOM enabled**  
-DCOM is enabled by default on Windows.  
-If disabled, the technique will not work.
-{% endhint %}
+- **Local administrator privileges** (required to write/read via `ADMIN$`)  
+- **Remote Activation / Launch permissions** on the chosen DCOM object  
+- **RPC/DCOM ports reachable** (TCP 135 + dynamic RPC ports)  
+- **SMB reachable** (port 445 for output retrieval)  
+- **DCOM enabled** (default on Windows)
 
 ## Commons
 
