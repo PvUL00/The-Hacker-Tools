@@ -24,7 +24,7 @@ It has the following generic command line arguments, similar to other Impacket t
   - `domain.local/user@dc01`  
   - `domain/user:password@10.10.0.1`
 
-![](<../../.gitbook/assets/impacket_positional_arg-with target.png>)
+![](<../../.gitbook/assets/impacket\_positional\_arg-with target.png>)
 
 * `-hashes`: the LM and/or NT hash to use for a [pass-the-hash](https://www.thehacker.recipes/ad/movement/ntlm/pth).  
   Format: `[LMhash]:NThash` (LM optional, NT must be prefixed with `:`).
