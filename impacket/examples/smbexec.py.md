@@ -54,7 +54,9 @@ smbexec.py introduces some options specific to the service-based execution model
 
 * `-share`: share where the output will be grabbed from (default C$)
 
-* `-mode`: Controls whether smbexec will start a local SMB server.
+* `-mode`: controls how command output is retrieved.  
+  - `SHARE` (default): use the existing share specified with `-share` on the target (e.g. `C$`, `ADMIN$`) to store and read command output.  
+  - `SERVER`: start a local SMB server on the attacking host and have the target connect back to it to deliver command output.
 
 ```bash
 # Cleartext authentication
